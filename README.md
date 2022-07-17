@@ -13,20 +13,20 @@ Java ile mesafeye ve şartlara göre uçak bileti fiyatı hesaplayan programı y
 
        import java.util.Scanner;
 
-        public class Main {
+       public class Main {
 
-      public static void main(String[] args) {
-    
+          public static void main(String[] args) {
+
         int km, ago, sec;
-        double toplam, kmBasıUcret = 0.10;
+        double toplam,yasIndırımsızTutar, kmBasıUcret = 0.10;
         Scanner inp = new Scanner(System.in);
-        
+
         System.out.print("Yaşınızı giriniz :");
         ago = inp.nextInt();
-        
+
         System.out.print("Km bilgisi giriniz :");
         km = inp.nextInt();
-        
+
         System.out.print("Tek yön için 1'i gidiş geliş için 2'yi tıklayın :");
         sec = inp.nextInt();
 
@@ -44,6 +44,8 @@ Java ile mesafeye ve şartlara göre uçak bileti fiyatı hesaplayan programı y
                         toplam = km * kmBasıUcret * 0.30;
                         System.out.println("Toplam Tutarı :" + toplam);
 
+                    }else { yasIndırımsızTutar=km*kmBasıUcret;
+                        System.out.println("İndirimsiz Tutar :" + yasIndırımsızTutar);
                     }
                     break;
                 case 2:
@@ -59,6 +61,8 @@ Java ile mesafeye ve şartlara göre uçak bileti fiyatı hesaplayan programı y
                         toplam = km * kmBasıUcret * 0.30 * 0.20;
                         System.out.println("Toplam Tutarı :" + toplam);
 
+                    }else { yasIndırımsızTutar=km*kmBasıUcret*0.20;
+                        System.out.println("İndirimsiz Tutar :" + yasIndırımsızTutar);
                     }
                     break;
                 default:
@@ -69,14 +73,13 @@ Java ile mesafeye ve şartlara göre uçak bileti fiyatı hesaplayan programı y
 
         } else {
             System.out.println("Hatalı veri girdiniz !!!");
-          }
         }
+       }
       }
+
+
  
  
- 
- 
- ![image](https://user-images.githubusercontent.com/107626332/179386336-497114d1-04f6-4cc6-891e-db57907a767f.png)
 
 
 
